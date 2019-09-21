@@ -1,18 +1,17 @@
 module.exports.run = (client, message, args) => {
-    const  Fortnite  =  require("fortnite-9812")
-    const  fortnite  =  new  Fortnite.Client({
-    TRN: "b9e7a845-2b70-40d0-8ffc-07045f2836f7"
-    //fnbrToken: "<fnbr API key if you have one>" Not required for this example
-    })//from now, you can use all the function that require the client
-     
-    fortnite.TRNShop()
-    .then(shop  => {
-        console.log(shop)
-        message.channel.send(shop[0])
-    })
-    .catch(err  =>  console.error(err))
-}
+const Apex = require('apex-api');
+const apex = new Apex('API key');
+
+apex.user('termk47', 'xbox').then((res) => {
+   console.log(`${res.data.children[0].stats[0].metadata.key} : ${res.data.children[0].stats[0].value}`);
+})
+.catch((err) => {
+   if (err) { 
+return console.error(err.message);
+ }
+});
+ }
 module.exports.config = {
-    name: "s",
+    name: "apexstats",
     aliases: []
 }
