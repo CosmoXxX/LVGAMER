@@ -3,7 +3,7 @@ const { getMember, formatDate } = require("../../functions.js");
 const joined = formatDate(member.joinedAt);
         const roles = member.roles
             .filter(r => r.id !== message.guild.id)
-            .map(r => r).join(", ") || 'none';
+            .map(r => r).join(", ") || 'Aucun';
 
         // User variables
         const created = formatDate(member.user.createdAt);
@@ -17,15 +17,16 @@ const joined = formatDate(member.joinedAt);
             **> Rejoints le:** ${joined}
             **>Rôles:** ${roles}`, true)
 
-            .addField('Informations d'utilisateurs:', stripIndents`**> ID:** ${member.user.id}
+            .addField('Informations d'utilisateurs:',`**> ID:** ${member.user.id}
             **> Pseudo**: ${member.user.username}
             **> Tag**: ${member.user.tag}
             **> Créé le**: ${created}`, true)
+)
             
             .setTimestamp()
 
         if (member.user.presence.game) 
-            embed.addField('Currently playing',`**> Name:** ${member.user.presence.game.name}`);
+            embed.addField('Joue à',`**> Nom:** ${member.user.presence.game.name}`);
 
         message.channel.send(embed);
     }
