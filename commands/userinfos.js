@@ -1,4 +1,4 @@
-const { RichEmbed } = require("discord");
+const { RichEmbed } = require("discord.js");
 const { getMember, formatDate } = require("../../functions.js");
 const joined = formatDate(member.joinedAt);
         const roles = member.roles
@@ -21,7 +21,7 @@ const joined = formatDate(member.joinedAt);
             **> Pseudo**: ${member.user.username}
             **> Tag**: ${member.user.tag}
             **> Créé le**: ${created}`, true)
-)
+
             
             .setTimestamp()
 
