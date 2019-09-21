@@ -29,7 +29,7 @@ const joined = formatDate(member.joinedAt);
 
         message.channel.send(embed);
     }
-module.exports.hep = {
+module.exports.config = {
  name: "userinfos",
 aliases: ["ui","userinfo"]
 }
