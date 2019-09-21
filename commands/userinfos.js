@@ -17,7 +17,7 @@ const joined = formatDate(member.joinedAt);
             **> Rejoints le:** ${joined}
             **>Rôles:** ${roles}`, true)
 
-            .addField('Informations d'utilisateurs:',`**> ID:** ${member.user.id}
+            .addField('Informations d\'utilisateurs:',`**> ID:** ${member.user.id}
             **> Pseudo**: ${member.user.username}
             **> Tag**: ${member.user.tag}
             **> Créé le**: ${created}`, true)
