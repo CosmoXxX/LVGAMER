@@ -1,7 +1,9 @@
 const { RichEmbed } = require("discord.js");
 const { getMember, formatDate } = require("../../functions.js");
 const joined = formatDate(member.joinedAt);
-        const roles = member.roles
+   module.exports.run = async (client, message,args) => {   
+  let bot = client;
+const roles = member.roles
             .filter(r => r.id !== message.guild.id)
             .map(r => r).join(", ") || 'Aucun';
 
