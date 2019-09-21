@@ -1,5 +1,5 @@
 const { RichEmbed } = require("discord.js");
-const { getMember, formatDate } = require("../../functions.js");
+const { getMember, formatDate } = require("../functions.js");
 const joined = formatDate(member.joinedAt);
    module.exports.run = async (client, message,args) => {   
   let bot = client;
